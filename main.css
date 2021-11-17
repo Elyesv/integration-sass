@@ -3,6 +3,7 @@
    License: none (public domain)
 */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -121,6 +122,119 @@ table {
   font-size: 20px;
   background-color: white;
   border-radius: 5px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.title-text {
+  width: 50%;
+  margin-left: 140px;
+  margin-top: 200px;
+}
+@media (max-width: 1750px) {
+  .title-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+  }
+}
+.title-text > h1 {
+  font-size: 49px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  .title-text > h1 {
+    text-align: center;
+  }
+}
+.title-text > p {
+  font-size: 28px;
+  font-family: Nunito;
+  color: white;
+  opacity: 0.8;
+  margin-top: 15px;
+  margin-bottom: 44px;
+}
+@media (max-width: 767px) {
+  .title-text > p {
+    text-align: center;
+  }
+}
+.title-text > div {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .title-text > div {
+    flex-direction: column;
+  }
+}
+.title-text > div > input {
+  background-color: #384170;
+  width: 350px;
+  height: 55px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 5px;
+}
+.title-text > div > input::placeholder {
+  font-family: Nunito;
+  font-size: 20px;
+  color: white;
+}
+.title-text > div > input:focus {
+  outline: none;
+}
+.title-text > div > div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #384170;
+  width: 100px;
+  height: 55px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 5px;
+  font-family: Nunito;
+  font-size: 20px;
+  color: white;
+}
+.title-text > div > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+  width: 220px;
+  height: 55px;
+  font-size: 18px;
+  font-family: Nunito;
+  font-weight: 600;
+  color: white;
+  background-color: #93A5FF;
+  border-radius: 5px;
+}
+@media (max-width: 767px) {
+  .title-text > div > a {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+.title-img {
+  padding-top: 100px;
+  display: block;
+}
+@media (max-width: 1750px) {
+  .title-img {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
