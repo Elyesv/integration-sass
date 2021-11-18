@@ -485,6 +485,98 @@
                         }
                 }
         }
+        &-opinion{
+                display: flex;
+                width: 100%;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-direction: column;
+                padding-bottom: 98px;
+
+                > div:first-child{
+                        display: flex;
+                        justify-content: space-evenly;
+                        width: 100%;
+                        @include lg{
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                        }
+                }
+                &-single{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        max-width: 685px;
+                        @include lg{
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                text-align: center;
+                                margin-bottom: 15px;
+                        }
+
+                        > img{
+                               margin-right: 30px;
+                        }
+                        &-comment{
+                                display: flex;
+                                flex-direction: column;
+                                @include lg{
+                                        align-items: center;
+                                }
+                                > img{
+                                        width: 136px;
+                                        height: 19px;
+                                        margin-bottom: 25px;
+                                }
+
+                                > q{
+                                        font-size: 23px;
+                                        font-style: italic;
+                                        color: #2E2E2E;
+                                        line-height: 1.5;
+                                        word-spacing: 1px;
+                                        margin-bottom: 12px;
+                                }
+
+                                > p{
+                                        font-size: 20px;
+                                        font-weight: bold;
+                                }
+                        }
+                }
+                &-slider{
+                        margin-top: 67px;
+                        display: flex;
+                        align-items: center;
+
+                        &-dot{
+                                width: 13px;
+                                height: 13px;
+                                margin-right: 22px;
+                                border-radius: 50%;
+                                background-color: #93A5FF;
+                                opacity: 0.38;
+                        }
+                }
+        }
+        &-dot-1{
+                position: absolute;
+                top: -40px;
+                right: 0;
+                @include lg{
+                        display: none;
+                }
+        }
+        &-dot-2{
+                position: absolute;
+                bottom: -40px;
+                left: 0;
+                @include lg{
+                        display: none;
+                }
+        }
 }
 
 .card-img-position{
@@ -515,4 +607,14 @@
 
 .display-none{
         display: none;
+}
+
+.relative{
+        position: relative;
+}
+
+.select{
+        opacity: 1;
+        width: 21px;
+        height: 21px;
 }
