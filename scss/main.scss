@@ -20,6 +20,9 @@
         background-image: url("image/header.png");
         background-size: cover;
         background-position: center center;
+        @include sm-rotated{
+                height: 165vh;
+        }
 
         &-navbar{
                 display: flex;
@@ -168,6 +171,7 @@
                                 justify-content: center;
                                 align-items: center;
                                 margin-left: 40px;
+                                text-decoration: none;
                                 width: 220px;
                                 height: 55px;
                                 font-size: 18px;
@@ -189,6 +193,120 @@
                 display: block;
                 @include xxl{
                         display: none;
+                }
+        }
+}
+
+.row{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 80px;
+
+        &-title{
+                font-family: Nunito;
+
+                > h3{
+                        font-size: 35px;
+                        font-weight: 900;
+                        text-align: center;
+                }
+
+                > p {
+                        font-size: 28px;
+                        opacity: 0.8;
+                        margin: 10px 0 79px 0;
+                        text-align: center;
+                }
+        }
+
+        &-content{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+                width: 100%;
+                padding-bottom: 60px;
+                @include xl{
+                        flex-direction: column;
+                }
+
+                &-left{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        @include xl{
+                                margin-bottom: 50px;
+                        }
+
+                        &-element{
+                                display: flex;
+                                max-width: 630px;
+                                margin-bottom: 60px;
+                                @include sm{
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        align-items: center;
+                                }
+
+                                > img{
+                                        height: 70px;
+                                        width: 70px;
+                                        margin-right: 30px;
+                                }
+
+                                &-info{
+                                        font-family: Nunito;
+                                        font-size: 23px;
+                                        max-width: 500px;
+
+                                        > h4{
+                                                font-weight: bold;
+                                                margin-bottom: 24px;
+                                                @include sm{
+                                                        text-align: center;
+                                                }
+                                        }
+
+                                        >p {
+                                                opacity: 0.79;
+                                                @include sm{
+                                                        text-align: center;
+                                                }
+                                        }
+                                }
+                        }
+                }
+                &-right{
+                        position: relative;
+
+                        &-illustration{
+                                @include sm{
+                                        width: 375px;
+                                }
+                        }
+
+                        &-dot-1{
+                                position: absolute;
+                                bottom: -60px;
+                                left: -60px;
+                                @include lg{
+                                        display: none;
+                                }
+
+                        }
+
+                        &-dot-2{
+                                position: absolute;
+                                top: -60px;
+                                right: -60px;
+                                rotate: 90deg;
+                                @include lg{
+                                        display: none;
+                                }
+                        }
                 }
         }
 }

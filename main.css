@@ -65,6 +65,11 @@ table {
   background-size: cover;
   background-position: center center;
 }
+@media (max-width: 850px) and (max-height: 400px) {
+  .main-header {
+    height: 165vh;
+  }
+}
 .main-header-navbar {
   display: flex;
   justify-content: space-between;
@@ -212,6 +217,7 @@ table {
   justify-content: center;
   align-items: center;
   margin-left: 40px;
+  text-decoration: none;
   width: 220px;
   height: 55px;
   font-size: 18px;
@@ -233,6 +239,120 @@ table {
 }
 @media (max-width: 1750px) {
   .title-img {
+    display: none;
+  }
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+.row-title {
+  font-family: Nunito;
+}
+.row-title > h3 {
+  font-size: 35px;
+  font-weight: 900;
+  text-align: center;
+}
+.row-title > p {
+  font-size: 28px;
+  opacity: 0.8;
+  margin: 10px 0 79px 0;
+  text-align: center;
+}
+.row-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-bottom: 60px;
+}
+@media (max-width: 1536px) {
+  .row-content {
+    flex-direction: column;
+  }
+}
+.row-content-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 1536px) {
+  .row-content-left {
+    margin-bottom: 50px;
+  }
+}
+.row-content-left-element {
+  display: flex;
+  max-width: 630px;
+  margin-bottom: 60px;
+}
+@media (max-width: 767px) {
+  .row-content-left-element {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.row-content-left-element > img {
+  height: 70px;
+  width: 70px;
+  margin-right: 30px;
+}
+.row-content-left-element-info {
+  font-family: Nunito;
+  font-size: 23px;
+  max-width: 500px;
+}
+.row-content-left-element-info > h4 {
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+@media (max-width: 767px) {
+  .row-content-left-element-info > h4 {
+    text-align: center;
+  }
+}
+.row-content-left-element-info > p {
+  opacity: 0.79;
+}
+@media (max-width: 767px) {
+  .row-content-left-element-info > p {
+    text-align: center;
+  }
+}
+.row-content-right {
+  position: relative;
+}
+@media (max-width: 767px) {
+  .row-content-right-illustration {
+    width: 375px;
+  }
+}
+.row-content-right-dot-1 {
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+}
+@media (max-width: 1350px) {
+  .row-content-right-dot-1 {
+    display: none;
+  }
+}
+.row-content-right-dot-2 {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  rotate: 90deg;
+}
+@media (max-width: 1350px) {
+  .row-content-right-dot-2 {
     display: none;
   }
 }

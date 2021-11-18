@@ -1,3 +1,7 @@
+@mixin sm-rotated {
+  @media (max-width:850px) and (max-height:400px) { @content; }
+}
+
 @mixin sm {
   @media (max-width: 767px) { @content; }
 }
