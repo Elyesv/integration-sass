@@ -390,6 +390,11 @@
                 width: 90%;
                 margin: 0 auto 50px auto;
                 justify-content: space-between;
+                @include xxl{
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                }
 
                 &-single{
                         width: 358px;
@@ -399,6 +404,10 @@
                         align-items: center;
                         box-shadow: 0px 5px 10px #d5d5d5;
                         border-radius: 5px;
+                        transition: all 0.3s;
+                        @include xxl{
+                                margin-top: 15px;
+                        }
 
                         &-img{
                                 position: relative;
@@ -502,4 +511,8 @@
 .selected-card{
         height: 641px;
         border-top: 11px solid #93A5FF;
+}
+
+.display-none{
+        display: none;
 }
