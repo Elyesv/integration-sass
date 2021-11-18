@@ -1,4 +1,16 @@
-var card_array = Array.from(document.getElementsByClassName("row-choice-single"))
+var cards = document.querySelectorAll('.row-choice-single:not(.fixed)')
 
-
-console.log(card_array)
+cards.forEach(card =>{
+    card.addEventListener('mouseover', function (){
+        card.classList.add('selected-card')
+        var button = Array.from(card.children)
+        var button = button[5]
+        button.classList.remove('display-none')
+    })
+    card.addEventListener('mouseout', function (){
+        card.classList.remove('selected-card')
+        var button = Array.from(card.children)
+        var button = button[5]
+        button.classList.add('display-none')
+    })
+})
